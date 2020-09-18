@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="15dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="82dp"
+                android:layout_marginTop="0dp"
+                android:text="@string/device_owner"
+                android:textColor="#FFFFFF"
+                android:layout_marginStart="82dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="52dp"
+                android:layout_marginTop="0dp"
+                android:text="@string/guest"
+                android:textColor="#FFFFFF"
+                android:layout_marginStart="52dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/name"
+                android:textColor="#FFFFFF"
+                android:layout_marginStart="5dp" />
+
+            <CheckBox
+                android:id="@+id/name_checkBox"
+                android:layout_width="118dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="70dp"
+                android:layout_marginTop="20dp"
+                android:checked="false"
+                android:layout_marginStart="70dp" />
+
+            <EditText
+                android:id="@+id/guest_name_field"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:autofillHints=""
+                android:hint="@string/guest_name"
+                android:inputType="text"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/blood_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="71dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/blood_type"
+                android:textColor="#FFFFFF" />
+
+            <CheckBox
+                android:id="@+id/blood_type_checkBox"
+                android:layout_width="78dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="20dp"
+                android:checked="false"
+                android:layout_marginStart="40dp" />
+
+            <Spinner
+                android:id="@+id/blood_type_spinner"
+                android:layout_width="130dp"
+                android:layout_height="50sp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="20dp"
+                android:drawSelectorOnTop="true"
+                android:entries="@array/blood_array"
+                android:prompt="@string/select_blood"
+                android:layout_marginStart="40dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="88dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/number"
+                android:textColor="#FFFFFF" />
+
+            <CheckBox
+                android:id="@+id/phone_number_checkBox"
+                android:layout_width="111dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:checked="false"
+                android:layout_marginStart="20dp" />
+
+            <EditText
+                android:id="@+id/guest_phone_number_field"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:hint="@string/guest_phone_number"
+                android:importantForAutofill="no"
+                android:inputType="phone"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/location"
+                android:textColor="#FFFFFF" />
+
+            <EditText
+                android:id="@+id/location_field"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:hint="@string/enter_location"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:textColor="#FFFFFF"
+                android:textColorHighlight="#858585" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/previewSMS_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:onClick="onClick"
+            android:text="@string/preview" />
+
+        <Button
+            android:id="@+id/home_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:onClick="onClick"
+            android:text="@string/home" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
