@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:context=".MainActivity">
+
+        <ImageButton
+            android:id="@+id/police_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sos_button"
+            android:layout_alignStart="@+id/hospital_button"
+            android:layout_alignLeft="@+id/hospital_button"
+            android:layout_marginTop="28dp"
+            android:contentDescription="@string/police"
+            android:onClick="onClick"
+            android:src="@drawable/m" />
+
+        <ImageButton
+            android:id="@+id/hospital_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/police_button"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_toStartOf="@+id/bloodbank_button"
+
+            android:layout_toLeftOf="@+id/bloodbank_button"
+            android:contentDescription="@string/hospital"
+            android:onClick="onClick"
+            android:src="@drawable/k" />
+
+        <ImageButton
+            android:id="@+id/sos_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/bloodbank_button"
+            android:layout_alignRight="@+id/bloodbank_button"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="18dp"
+            android:contentDescription="@string/sos"
+            android:onClick="onClick"
+            android:src="@drawable/red" />
+
+        <ImageButton
+            android:id="@+id/bloodbank_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/police_button"
+            android:layout_centerHorizontal="true"
+            android:contentDescription="@string/blood_bank"
+            android:onClick="onClick"
+            android:src="@drawable/amn" />
+
+        <ImageButton
+            android:id="@+id/ambulance_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/police_button"
+            android:layout_alignLeft="@+id/police_button"
+            android:layout_alignBottom="@+id/settings_button"
+            android:contentDescription="@string/ambulance"
+            android:onClick="onClick"
+            android:src="@drawable/ambulance" />
+
+        <ImageButton
+            android:id="@+id/settings_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/TextView04"
+            android:layout_alignLeft="@+id/TextView04"
+            android:layout_alignTop="@+id/home_button"
+            android:contentDescription="@string/settings"
+            android:onClick="onClick"
+            android:src="@drawable/icon_settings1" />
+
+        <ImageButton
+            android:id="@+id/emergencycontact_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/TextView05"
+            android:layout_marginStart="14dp"
+            android:layout_marginLeft="14dp"
+            android:layout_toEndOf="@+id/bloodbank_button"
+            android:layout_toRightOf="@+id/bloodbank_button"
+            android:contentDescription="@string/emergency_contact"
+            android:onClick="onClick"
+            android:src="@drawable/help_th" />
+
+        <ImageButton
+            android:id="@+id/firestation_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@id/emergencycontact_button"
+            android:layout_alignLeft="@id/emergencycontact_button"
+            android:layout_alignTop="@+id/sos_button"
+            android:contentDescription="@string/fire_station"
+            android:onClick="onClick"
+            android:src="@drawable/fp__lg_fire" />
+
+        <ImageButton
+            android:id="@+id/home_button"
+            android:layout_width="wrap_content"
+            android:layout_height="85dp"
+            android:layout_below="@+id/TextView05"
+            android:layout_alignStart="@+id/emergencycontact_button"
+            android:layout_alignLeft="@+id/emergencycontact_button"
+            android:layout_alignEnd="@+id/emergencycontact_button"
+            android:layout_alignRight="@+id/emergencycontact_button"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginRight="0dp"
+            android:contentDescription="@string/home"
+            android:onClick="onClick"
+            android:src="@drawable/imag" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hospital_button"
+            android:layout_alignStart="@+id/hospital_button"
+            android:layout_alignLeft="@+id/hospital_button"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:text="@string/hospital"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/TextView01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sos_button"
+            android:layout_centerHorizontal="true"
+            android:text="@string/sos"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/TextView02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/TextView01"
+            android:layout_alignEnd="@+id/firestation_button"
+            android:layout_alignRight="@+id/firestation_button"
+            android:layout_alignBottom="@+id/TextView01"
+            android:layout_marginEnd="11dp"
+            android:layout_marginRight="11dp"
+            android:layout_marginBottom="0dp"
+            android:text="@string/fire_station"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/TextView03"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/police_button"
+            android:layout_alignStart="@+id/textView1"
+            android:layout_alignLeft="@+id/textView1"
+            android:text="@string/police"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/TextView06"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ambulance_button"
+            android:layout_alignStart="@+id/TextView03"
+            android:layout_alignLeft="@+id/TextView03"
+            android:text="@string/ambulance"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/TextView05"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/police_button"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="27dp"
+            android:layout_marginRight="27dp"
+            android:text="@string/emergency_contact"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/TextView04"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/home_button"
+            android:layout_alignStart="@+id/bloodbank_button"
+            android:layout_alignLeft="@+id/bloodbank_button"
+            android:text="@string/blood_bank"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/TextView07"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/settings_button"
+            android:layout_centerHorizontal="true"
+            android:text="@string/settings"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/TextView08"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/home_button"
+            android:layout_marginStart="37dp"
+            android:layout_marginLeft="37dp"
+            android:layout_toEndOf="@+id/settings_button"
+            android:layout_toRightOf="@+id/settings_button"
+            android:text="@string/home"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#FFFFFF" />
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
